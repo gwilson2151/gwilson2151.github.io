@@ -1,0 +1,19 @@
+<html>
+<body>
+<h2>.gitconfig</h2>
+<code>
+[alias]
+	co = checkout
+	st = status
+	br = branch
+	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+	type = cat-file -t
+	dump = cat-file -p
+	ahead = cherry -v origin/master
+	meld = difftool -y
+	unstage = reset HEAD --
+	discard = checkout --
+	st-commit = diff-tree --name-status -r
+</code>
+</body>
+</html>
