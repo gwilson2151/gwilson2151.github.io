@@ -1,7 +1,34 @@
-<html>
-<body>
-<h2>profile.ps1</h2>
-<pre><code>
+---
+layout: page
+title: Configs
+permalink: /configs/
+---
+## .bashrc
+~~~ bash
+alias ls='ls -h --color'
+alias ll="ls -l"
+alias la="ls -la"
+alias npp=$"\"/c/Program Files (x86)/Notepad++/notepad++.exe\""
+~~~
+
+## .gitconfig
+~~~
+[alias]
+	co = checkout
+	st = status
+	br = branch
+	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+	type = cat-file -t
+	dump = cat-file -p
+	ahead = cherry -v origin/master
+	meld = difftool -y
+	unstage = reset HEAD --
+	discard = checkout --
+	st-commit = diff-tree --name-status -r
+~~~
+
+## profile.ps1
+~~~
 if ($host.Name -eq 'ConsoleHost')
 {
 	# Set up environment
@@ -47,6 +74,4 @@ if ($host.Name -eq 'ConsoleHost')
 		}
 	}
 }
-</code></pre>
-</body>
-</html>
+~~~
