@@ -9,6 +9,14 @@ alias ls='ls -h --color'
 alias ll="ls -l"
 alias la="ls -la"
 alias npp=$"\"/c/Program Files (x86)/Notepad++/notepad++.exe\""
+alias posh='powershell'
+alias psc='posh -c'
+alias python2='/c/Python27/python.exe'
+alias python3='/c/python35/python.exe'
+alias http-serve2='python2 -m SimpleHTTPServer 8001 > /dev/null 2>&1'
+alias http-serve='python3 -m http.server 8000 > /dev/null 2>&1'
+alias bash-replace='exec "$BASH"'
+alias bashrc-reload='. ~/.bashrc'
 ~~~
 
 ## .gitconfig
@@ -28,7 +36,7 @@ alias npp=$"\"/c/Program Files (x86)/Notepad++/notepad++.exe\""
 ~~~
 
 ## profile.ps1
-~~~
+~~~ powershell
 if ($host.Name -eq 'ConsoleHost')
 {
 	# Set up environment
