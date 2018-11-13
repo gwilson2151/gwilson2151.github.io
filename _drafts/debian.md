@@ -17,3 +17,5 @@ sudo apt-get -t stretch-backports install nodejs
 sudo apt-get -t stretch-backports install git
 sudo apt-get install xfce4-taskmanager
 sudo apt-get install xfce4-terminal
+sudo apt-get install gcc make libxslt-dev libxml2-dev zlib1g-dev
+sudo apt-get install ruby ruby-dev bundle
