@@ -1,7 +1,42 @@
-<html>
-<body>
-<h2>profile.ps1</h2>
-<pre><code>
+---
+layout: page
+title: Configs
+permalink: /configs/
+---
+## .bashrc
+~~~ bash
+alias ls='ls -h --color'
+alias ll="ls -l"
+alias la="ls -la"
+alias npp=$"\"/c/Program Files (x86)/Notepad++/notepad++.exe\""
+alias posh='powershell'
+alias psc='posh -c'
+alias python2='/c/Python27/python.exe'
+alias python3='/c/python35/python.exe'
+alias http-serve2='python2 -m SimpleHTTPServer 8001 > /dev/null 2>&1'
+alias http-serve='python3 -m http.server 8000 > /dev/null 2>&1'
+alias bash-replace='exec "$BASH"'
+alias bashrc-reload='. ~/.bashrc'
+~~~
+
+## .gitconfig
+~~~
+[alias]
+	co = checkout
+	st = status
+	br = branch
+	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+	type = cat-file -t
+	dump = cat-file -p
+	ahead = cherry -v origin/master
+	meld = difftool -y
+	unstage = reset HEAD --
+	discard = checkout --
+	st-commit = diff-tree --name-status -r
+~~~
+
+## profile.ps1
+~~~ powershell
 if ($host.Name -eq 'ConsoleHost')
 {
 	# Set up environment
@@ -47,6 +82,4 @@ if ($host.Name -eq 'ConsoleHost')
 		}
 	}
 }
-</code></pre>
-</body>
-</html>
+~~~
