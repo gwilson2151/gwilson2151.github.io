@@ -9,11 +9,11 @@
 title: Gavin Wilson
 email: gavinwilson@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  A personal website for Gavin Wilson. Code, configuration, retrospectives, and personal interests.
+  Gavin Wilson, a human. Code, configuration, perspectives, and interests.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://gavinwilson.name" # the base hostname & protocol for your site
 twitter_username: gavin_wilson
-github_username:  gwilson2151
+github_username: gwilson2151
 
 # Build settings
 markdown: kramdown
