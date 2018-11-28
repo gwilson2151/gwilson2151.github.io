@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="">
+	<title>Image Test</title>
+</head>
+<body>
+	<img id="img" src="11-singlecolour.jpg"/>
+	<select id="img-select">
+		<option value="">choose...</option>
+		<option value="11-singlecolour.jpg" selected="true">solid border</option>
+		<option value="12-multicolour.jpg">3 colour border</option>
+		<option value="13-lowqual.jpg">low quality</option>
+		<option value="14-gradient.jpg">gradient</option>
+	</select>
+	<button id="picker">pick a color</button>
+	
+	<br/>
+	Picked color: <div id="picked" style="width:100px;height:100px;"></div>
+	Recommended bgcolor: <div id="bgcolor" style="width:100px;height:100px;"></div><br/>
+	Suggested bgcolors: <div id="suggested"></div>
+	<script src="ImageDataIndexer.js"></script>
+	<script src="index.js"></script>
+</body>
+</html>
