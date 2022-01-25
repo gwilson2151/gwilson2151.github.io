@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARIA Role Alert Test</title>
+  </head>
+  <body>
+    <div id="content-container">
+	  <button onclick="addAlertWrong()">Add Alert</button>
+      <h1>role=alert on container added to page</h1>
+    </div>
+    <div>
+	  <button onclick="addAlertRight()">Add Alert</button>
+      <h1>role=alert on container with content added inside</h1>
+      <div id="alert-container" role="alert">
+      </div>
+    </div>
+    
+    <script>
+		var getText = (function() {
+			const texts = [
+			  "how now brown cow",
+			  "what me worry?",
+			  "don't worry, be happy"
+			];
+			let textIndex = 0;
+			
+			return function () {
+			  const text = texts[textIndex++];
+			  if (textIndex >= texts.length) {
+				textIndex = 0;
+			  }
+			  return text;
+			}
+		})();
+		
+		function addAlertWrong() {
+		  const elem = document.createElement('div');
+		  elem.setAttribute("role", "alert");
+		  elem.innerHTML = getText();
+		  document.getElementById("content-container").appendChild(elem);
+		}
+		
+		function addAlertRight() {
+		  const elem = document.createElement('div');
+		  elem.innerHTML = getText();
+		  document.getElementById("alert-container").appendChild(elem);
+		}
+        
+    </script>
+  </body>
+</html>
